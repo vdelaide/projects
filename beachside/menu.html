@@ -92,9 +92,17 @@
     </div>
 
     <script>
-        const filters = document.getElementById("filters").children
-        filters.array.forEach(element => {
-            
+
+        const filtersDiv = document.getElementById("filters");
+        const filtersArray = Array.from(filtersDiv.children);
+
+        filtersArray.forEach(elem => {
+            elem.addEventListener("click", function picked(){
+                for (let i = 0; i < filtersArray.length; i++){
+                    console.log(i)
+                }
+                elem.classList.add("inverted")
+            })
         });
         console.log(filters)
 
