@@ -12,7 +12,9 @@ body{
     margin: 0;
     background-color: #43dfda;
 }
+
 /*General customizations*/
+
 button{
     font-weight: bolder;
     font-size: 13pt;
@@ -40,54 +42,80 @@ h1{
 
 #filters{
     display: flex;
-    width: 25rem;
-    justify-content: space-evenly;
+    width: 35rem;
+    justify-content: space-between;
 }
 
 #filters > button{
-    color: lightcoral;
-    border-color: lightcoral;
     border-radius: 10px;
     padding: 5px;
     width: 8rem;
+    transition: transform 0.2s;
+}
+
+#filters > button:hover{
+    transform: scale(1.1);
+}
+
+.regular{
+    color: lightcoral;
+    border-color: lightcoral;
+}
+
+.inverted{
+    background-color: coral;
+    color: white;
+    border-color: white;
 }
 
 /*Menu Item Customization*/
 
 body > div{
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 #items{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 60em;
+    width: 70em;
     height: 20em;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .item{
     display: grid;
     grid-template-areas: "image description";
     grid-template-columns: 1fr 1fr;
-    width: 50%;
-    height: 45%;
+    width: 32em;
+    height: 50%;
+    margin-top: 1em;
+    margin-left: 0.5em;
     border-radius: 1em;
     background-color: lightcoral;
+    transition: transform 0.25s;
+}
+
+.item:hover{
+    transform: scale(1.05)
 }
 
 .item > img{
     width: 13em;
-    height: auto;
+    height: 8em;
     align-self: center;
     justify-self: center;
     border-radius: 1em;
 }
 
-.item .name{
+.name{
     color: rgb(57, 75, 81);
     letter-spacing: 2px;
     font-weight: bolder;
+}
+
+.price{
+    font-size: 8pt;
+    color: lightskyblue;
 }
