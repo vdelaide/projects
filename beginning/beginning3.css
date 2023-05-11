@@ -1,0 +1,122 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.subscribe-button{
+  background: rgb(200, 0, 0);
+  color: white;
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+}
+.subscribe-button:hover{
+  opacity: 0.7;
+}
+.subscribe-button:active{
+  opacity: 0.5;
+}
+.join-button{
+  background-color: white;
+  border-color: rgb(41, 118, 211);
+  border-width: 1px;
+  border-style: solid;
+  color: rgb(41, 118, 211);
+  padding-top: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 9px;
+  border-radius: 2;
+  cursor: pointer;
+  transition: background-color 0.25s,
+      color 0.25s;
+  vertical-align: top;
+}
+.join-button:hover{
+  background-color: rgb(41, 118, 211);
+  color: white
+}
+.join-button:active{
+  opacity: 0.7;
+}
+.tweet-button{
+  background-color: #1d9bf0;
+  border: none;
+  color: white;
+  padding-top: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 9px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: medium;
+  transition: box-shadow 0.15s;
+  vertical-align: top;
+}
+.tweet-button:hover{
+  box-shadow: 5px 5px 10px rgba(102, 102, 232, 0.15);
+}
+.github-button{
+  background-color: rgb(46, 164, 79);
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 90px;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+  vertical-align: top;
+  cursor: pointer;
+}
+.github-button:hover{
+  box-shadow: 5px 5px 10px rgba(46, 164, 79, 0.15);
+}
+.linkedin-button{
+  background-color: rgb(10, 102, 194);
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  width: 205px;
+  color: white;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: background-color 0.15s;
+  vertical-align: top;
+  cursor: pointer;
+}
+.linkedin-button:hover{
+  background-color: rgb(8, 80, 152);
+}
+.fries-button{
+  border: 5px solid rgb(255, 72, 0);
+  border-radius: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 13px;
+  padding-left: 13px;
+  color: rgb(255, 72, 0);
+  font-family: Verdana;
+  font-weight: bolder;
+  text-align: center;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+.fries-button:hover{
+  background-color: rgb(255, 201, 179);
+}
+p{
+  font-family: Verdana;
+  font-size: large;
+  font-weight: lighter;
+}
