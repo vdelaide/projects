@@ -12,8 +12,6 @@
     *Make the body background look prettier
     *Space items further away from each other
     *Add a logo to the first div
-    *Space the filters apart from each other
-    *Look for new images for the things
     *Add actual descriptions lmfao
     *Add a hover effect to the buttons
     *Make it filterable thru the buttons
@@ -31,7 +29,7 @@
         <button class="regular">All</button>
         <button class="regular">Breakfast</button>
         <button class="regular">Lunch</button>
-        <button class="inverted">Dinner</button>
+        <button class="regular">Dinner</button>
 
     </div>
 
@@ -86,12 +84,21 @@
             <img src="images/dinosaurNuggets.jpg" alt="Picture of Dinosaur Nuggets">
             <div class="info">
                 <p class="name">Dinosaur Nuggets</p>
-                <p class="price">$4.99</p>
+                <p class="price">$2.99</p>
                 <p class="description">description</p>
             </div>
         </div>
 
     </div>
+
+    <script>
+        const filters = document.getElementById("filters").children
+        filters.array.forEach(element => {
+            
+        });
+        console.log(filters)
+
+    </script>
     
 </body>
 </html>
