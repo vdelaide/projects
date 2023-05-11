@@ -1,0 +1,93 @@
+/**{outline: 3px solid #00ff2a52}*/
+
+/*Important bits*/
+html, body{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #43dfda;
+}
+/*General customizations*/
+button{
+    font-weight: bolder;
+    font-size: 13pt;
+}
+
+button, p, h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+h1{
+    color: coral;
+    letter-spacing: 3px;
+}
+
+/*Everything above the menu*/
+
+#first{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#filters{
+    display: flex;
+    width: 25rem;
+    justify-content: space-evenly;
+}
+
+#filters > button{
+    color: lightcoral;
+    border-color: lightcoral;
+    border-radius: 10px;
+    padding: 5px;
+    width: 8rem;
+}
+
+/*Menu Item Customization*/
+
+body > div{
+    margin-top: 1.5em;
+}
+
+#items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60em;
+    height: 20em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    display: grid;
+    grid-template-areas: "image description";
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    height: 45%;
+    border-radius: 1em;
+    background-color: lightcoral;
+}
+
+.item > img{
+    width: 13em;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    border-radius: 1em;
+}
+
+.item .name{
+    color: rgb(57, 75, 81);
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
