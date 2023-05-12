@@ -17,7 +17,7 @@
 
     <div id="first">
 
-        <h1>Beachside Eats</h3>
+        <h1>Beachside Eats</h1>
 
     </div>
 
@@ -32,61 +32,61 @@
 
     <div id="items">
 
-        <div class="item" class="breakfast">
+        <div class="breakfast">
             <img src="images/ominousPancakes.jpeg" alt="Picture of Pancakes">
-            <div class="info">
+            <div>
                 <p class="name">Ominous Pancakes</p>
+                <hr>
                 <p class="price">$7.99</p>
-                <hr class="rounded">
                 <p class="description">These pancakes <b>will</b> fuck your wife, and they <b>will</b> make you watch. </p>
             </div>
         </div>
 
-        <div class="item" class="lunch">
+        <div class="lunch">
             <img src="images/saltySandwiches.jpg" alt="Picture of Sandwiches">
-            <div class="info">
+            <div>
                 <p class="name">Salty Sandwiches</p>
+                <hr>
                 <p class="price">$9.99</p>
-                <hr class="rounded">
                 <p class="description">A specialty of Beachside Eats, this sandwich is loaded with a healthy portion of sodium.</p>
             </div>
         </div>
 
-        <div class="item" class="dinner">
+        <div class="dinner">
             <img src="images/steakDinner.jpg" alt="Picture of a Steak Dinner">
-            <div class="info">
+            <div>
                 <p class="name">Normal Steak Dinner</p>
+                <hr>
                 <p class="price">$24.99</p>
-                <hr class="rounded">
                 <p class="description">A completely normal steak dinner, alongside some completely normal sides. </p>
             </div>
         </div>
 
-        <div class="item" class="breakfast">
+        <div class="breakfast">
             <img src="images/milkshake.jpg" alt="Picture of a Shake">
-            <div class="info">
+            <div>
                 <p class="name">Cum Shake</p>
+                <hr>
                 <p class="price">$4.99</p>
-                <hr class="rounded">
-                <p class="description">Enjoy our delicious shake made in-house, shaken, stirred, and treated with honey. You can't go wrong by picking this classic drink.</p>
+                <p class="description">Enjoy our delicious shake made in-house, shaken, stirred, and treated with honey.</p>
             </div>
         </div>
 
-        <div class="item" class="dinner">
+        <div class="dinner">
             <img src="images/macAndCheese.jpg" alt="Picture of Mac & Cheese">
-            <div class="info">
+            <div>
                 <p class="name">Mac & Cheese</p>
+                <hr">
                 <p class="price">$3.99</p>
-                <hr class="rounded">
                 <p class="description">macum ches</p>
             </div>
         </div>
 
-        <div class="item" class="dinner">
+        <div class="dinner">
             <img src="images/dinosaurNuggets.jpg" alt="Picture of Dinosaur Nuggets">
-            <div class="info">
+            <div>
                 <p class="name">Dinosaur Nuggets</p>
-                <hr class="rounded">
+                <hr>
                 <p class="price">$2.99</p>
                 <p class="description">An assort of handmade dinosaur nuggets for the kids, or for picky eaters.</p>
             </div>
@@ -95,13 +95,12 @@
     </div>
 
     <script>
+        //ignore everything here pls :3
 
         const filters = document.getElementById("filters");
         const filtersArray = Array.from(filters.children);
 
         // Food Items:
-        let foodArrays = [breakfastArray, lunchesArray, dinnersArray]
-
         const breakfasts = document.getElementsByClassName("breakfast")
         const breakfastArray = Array.from(breakfasts)
 
@@ -110,6 +109,8 @@
 
         const dinners = document.getElementsByClassName("dinner")
         const dinnersArray = Array.from(dinners)
+
+        let foodArrays = [breakfastArray, lunchesArray, dinnersArray]
 
         filtersArray.forEach(elem => {
             elem.addEventListener("click", function picked(){

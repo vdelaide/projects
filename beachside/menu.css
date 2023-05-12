@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: #43dfda;
+    background-color: #68d6d3;
 }
 
 /*General customizations*/
@@ -37,8 +37,8 @@ h1{
     margin-block-start: 0.2em;
     margin-block-end: 0.67em;
 }
-hr.rounded{
-    border: 1px solid rgb(88, 69, 69);
+hr{
+    border: 1.5px solid rgb(88, 69, 69);
     border-radius: 10px;
 }
 /*Everything above the menu*/
@@ -95,7 +95,7 @@ body > div{
     justify-content: space-evenly;
 }
 
-.item{
+#items > div{
     display: grid;
     grid-template-areas: "image description";
     grid-template-columns: 1fr 1fr;
@@ -108,11 +108,11 @@ body > div{
     transition: transform 0.25s;
 }
 
-.item:hover{
+#items > div:hover{
     transform: scale(1.05)
 }
 
-.item > img{
+#items img{
     width: 13em;
     height: 8em;
     align-self: center;
@@ -120,7 +120,7 @@ body > div{
     border-radius: 1em;
 }
 
-.info{
+#items > div > div{
     width: 15em;
 }
 
