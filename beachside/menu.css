@@ -20,7 +20,7 @@ button{
     font-size: 13pt;
 }
 
-button, p, h1{
+button, p, h1, header{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -28,7 +28,9 @@ button:hover{
     cursor: pointer;
 }
 p{
-    margin: 0.5em 0;
+    margin: 0.5em 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 h1{
     color: coral;
@@ -122,7 +124,7 @@ body > div{
     width: 15em;
 }
 
-.name{
+header{
     color: rgb(57, 75, 81);
     letter-spacing: 2px;
     font-weight: 800;
