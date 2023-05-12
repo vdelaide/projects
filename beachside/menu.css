@@ -16,7 +16,7 @@ body{
 /*General customizations*/
 
 button{
-    font-weight: bolder;
+    font-weight: 800;
     font-size: 13pt;
 }
 
@@ -28,14 +28,12 @@ button:hover{
     cursor: pointer;
 }
 p{
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+    margin: 0.5em 0;
 }
 h1{
     color: coral;
     letter-spacing: 3px;
-    margin-block-start: 0.2em;
-    margin-block-end: 0.67em;
+    margin: 0.2em 0.67em;
 }
 hr{
     border: 1.5px solid rgb(88, 69, 69);
@@ -127,11 +125,11 @@ body > div{
 .name{
     color: rgb(57, 75, 81);
     letter-spacing: 2px;
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 .price{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 8pt;
     color: rgb(250, 250, 135);
 }
