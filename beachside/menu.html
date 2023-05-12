@@ -10,10 +10,7 @@
     TODO FOR TMRW:
     --------------
     *Make the body background look prettier
-    *Space items further away from each other
     *Add a logo to the first div
-    *Add actual descriptions lmfao
-    *Add a hover effect to the buttons
     *Make it filterable thru the buttons
 -->
 <body>
@@ -40,6 +37,7 @@
             <div class="info">
                 <p class="name">Ominous Pancakes</p>
                 <p class="price">$7.99</p>
+                <hr class="rounded">
                 <p class="description">These pancakes <b>will</b> fuck your wife, and they <b>will</b> make you watch. </p>
             </div>
         </div>
@@ -49,6 +47,7 @@
             <div class="info">
                 <p class="name">Salty Sandwiches</p>
                 <p class="price">$9.99</p>
+                <hr class="rounded">
                 <p class="description">A specialty of Beachside Eats, this sandwich is loaded with a healthy portion of sodium.</p>
             </div>
         </div>
@@ -58,6 +57,7 @@
             <div class="info">
                 <p class="name">Normal Steak Dinner</p>
                 <p class="price">$24.99</p>
+                <hr class="rounded">
                 <p class="description">A completely normal steak dinner, alongside some completely normal sides. </p>
             </div>
         </div>
@@ -67,6 +67,7 @@
             <div class="info">
                 <p class="name">Cum Shake</p>
                 <p class="price">$4.99</p>
+                <hr class="rounded">
                 <p class="description">Enjoy our delicious shake made in-house, shaken, stirred, and treated with honey. You can't go wrong by picking this classic drink.</p>
             </div>
         </div>
@@ -76,6 +77,7 @@
             <div class="info">
                 <p class="name">Mac & Cheese</p>
                 <p class="price">$3.99</p>
+                <hr class="rounded">
                 <p class="description">macum ches</p>
             </div>
         </div>
@@ -84,8 +86,9 @@
             <img src="images/dinosaurNuggets.jpg" alt="Picture of Dinosaur Nuggets">
             <div class="info">
                 <p class="name">Dinosaur Nuggets</p>
+                <hr class="rounded">
                 <p class="price">$2.99</p>
-                <p class="description">description</p>
+                <p class="description">An assort of handmade dinosaur nuggets for the kids, or for picky eaters.</p>
             </div>
         </div>
 
@@ -97,6 +100,8 @@
         const filtersArray = Array.from(filters.children);
 
         // Food Items:
+        let foodArrays = [breakfastArray, lunchesArray, dinnersArray]
+
         const breakfasts = document.getElementsByClassName("breakfast")
         const breakfastArray = Array.from(breakfasts)
 
@@ -119,22 +124,27 @@
         
         function hideCategory(shown){
             //shown parameter is what needs to NOT be hidden
-            
+            foodArrays.remove(shown)
+            console.log(foodArrays)
         }
 
         function categorize(category){ //take the class of the item
             switch(category) {
                 case "all":
                     console.log("all")
+                    hideCategory("all")
                     break
                 case "breakfast":
                     console.log("breakfast")
+                    hideCategory(breakfastArray)
                     break
                 case "lunch":
                     console.log("lunch")
+                    hideCategory(lunchesArray)
                     break
                 case "dinner":
                     console.log("dinner")
+                    hideCategory(dinnersArray)
                     break
                 }
             }
