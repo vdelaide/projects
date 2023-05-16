@@ -1,3 +1,22 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+}
 p{
-  color: blue;
+  margin: 1em 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+#faqs > div{
+  display: flex;
+  width: 20em;
+  background-color: brown;
+  margin-bottom: 1em;
+  align-items: center;
 }
