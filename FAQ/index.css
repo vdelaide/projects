@@ -19,7 +19,7 @@ main{
   align-items: center;
 }
 h1{
-  margin: 1em;
+  height: 2em;
   text-align: center;
 }
 ul{
@@ -34,7 +34,7 @@ ul li{
   margin-bottom: 1em;
   border-radius: 0.75em;
 }
-input{
+input[type="radio"]{
   display: none;
 }
 ul label{
@@ -43,11 +43,27 @@ ul label{
   padding: 1em;
   color: white;
 }
-.content{
-  background-color: rgb(19, 193, 19);
-  border-radius: 0 0 0.75em 0.75em;
-}
+
 span{
   transform: rotate(90deg);
   font-size: 11pt;
 }
+
+.content{
+  line-height: 0.5em;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 0 0 0.75em 0.75em;
+  transition: max-height 0.5s;
+}
+
+input[type="radio"]:checked + .content{
+  max-height: 5em;
+}
+
+/*Somehow make this so that also when the radio is clicked the span
+also rotates, probably easier to do with JS which'll be my next thingy :3*/
+
+/*input[type="radio"]:checked + span{
+  transform: rotate(90deg);
+}*/
