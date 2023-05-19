@@ -35,17 +35,44 @@ nav{
   width: auto;
 }
 
-#navPrimary button{
-  padding: 1em 1em;
-  font-size: 12pt;
+#navPrimary > div{
+  padding: 1em;
   background-color: rgb(25, 174, 25);
-  flex: 1;
-  list-style: none;
-  border-width: 0;
   transition: background-color 0.25s;
 }
 
-#navPrimary button:hover{
+#navPrimary > div > p{
+  font-size: 12pt;
+}
+
+#navPrimary > div:hover{
   cursor: pointer;
   background-color: rgb(23, 156, 23);
+}
+
+#drop-down-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 11em;
+  position: fixed;
+  height: auto;
+  background-color: blue;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+#drop-down-about:hover .content{
+  max-height: 15em;
+}
+
+.content button{
+  background-color: rgb(25, 174, 25);
+  border-width: 0;
+  padding: 1em 1.7em;
 }
