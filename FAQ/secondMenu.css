@@ -35,17 +35,14 @@ nav{
   width: auto;
 }
 
-#navPrimary > div{
-  padding: 1em;
+#navPrimary > div > p{
   background-color: rgb(25, 174, 25);
+  padding: 0.9em 1em;
+  font-size: 12pt;
   transition: background-color 0.25s;
 }
 
-#navPrimary > div > p{
-  font-size: 12pt;
-}
-
-#navPrimary > div:hover{
+#navPrimary > div > p:hover{
   cursor: pointer;
   background-color: rgb(23, 156, 23);
 }
