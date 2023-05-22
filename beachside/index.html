@@ -13,6 +13,7 @@
     *Add a logo to #first
     *Change from flex to grid for displaying the items,
     **So that they aren't like random and stuff
+    *Find some way to make the display thing transition better
 -->
 <body>
 
@@ -128,7 +129,6 @@
         function categorize(category){ //take the class of the item
             switch(category) {
                 case "all":
-                    console.log("all")
                     foodArrays.forEach(element => {
                         element.forEach(category => {
                             category.removeAttribute("name")
@@ -137,7 +137,6 @@
                     });
                     break
                 case "breakfast":
-                    console.log("breakfast")
                     foodArrays.forEach(element => {
                         element.forEach(category => {
                             category.setAttribute("name", "hidden")
@@ -149,7 +148,6 @@
                     });
                     break
                 case "lunch":
-                    console.log("lunch")
                     foodArrays.forEach(element => {
                         element.forEach(category => {
                             category.setAttribute("name", "hidden")
@@ -161,7 +159,6 @@
                     });
                     break
                 case "dinner":
-                    console.log("dinner")
                     foodArrays.forEach(element => {
                         element.forEach(category => {
                             category.setAttribute("name", "hidden")

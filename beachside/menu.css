@@ -108,6 +108,7 @@ body > div{
     background-color: lightcoral;
     transition: transform 0.25s,
     display 1s;
+    /*^^^ ??????*/
 }
 
 #items > div:hover{
