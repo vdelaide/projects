@@ -38,6 +38,8 @@ h1{
     margin: 0.2em 0.67em;
 }
 hr{
+    margin-block-start: 0.1em;
+    margin-block-end: 0.5em;
     border: 1.5px solid rgb(88, 69, 69);
     border-radius: 10px;
 }
@@ -96,7 +98,6 @@ body > div{
 }
 
 #items > div{
-    display: grid;
     grid-template-areas: "image description";
     grid-template-columns: 1fr 1fr;
     width: 32em;
@@ -105,7 +106,8 @@ body > div{
     margin-left: 0.5em;
     border-radius: 1em;
     background-color: lightcoral;
-    transition: transform 0.25s;
+    transition: transform 0.25s,
+    display 1s;
 }
 
 #items > div:hover{
@@ -134,4 +136,11 @@ header{
     font-weight: 700;
     font-size: 8pt;
     color: rgb(250, 250, 135);
+}
+
+[name~="hidden"]{
+    display: none;
+}
+[name~="shown"]{
+    display: grid;
 }

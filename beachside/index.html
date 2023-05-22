@@ -10,8 +10,9 @@
     TODO FOR TMRW:
     --------------
     *Make the body background look prettier
-    *Add a logo to the first div
-    *Make it filterable thru the buttons
+    *Add a logo to #first
+    *Change from flex to grid for displaying the items,
+    **So that they aren't like random and stuff
 -->
 <body>
 
@@ -32,7 +33,7 @@
 
     <div id="items">
 
-        <div class="breakfast">
+        <div class="breakfast" name="shown">
             <img src="images/ominousPancakes.jpeg" alt="Picture of Pancakes">
             <div>
                 <header>Ominous Pancakes</header>
@@ -42,7 +43,7 @@
             </div>
         </div>
 
-        <div class="lunch">
+        <div class="lunch" name="shown">
             <img src="images/saltySandwiches.jpg" alt="Picture of Sandwiches">
             <div>
                 <header>Salty Sandwich</header>
@@ -52,7 +53,7 @@
             </div>
         </div>
 
-        <div class="dinner">
+        <div class="dinner" name="shown">
             <img src="images/steakDinner.jpg" alt="Picture of a Steak Dinner">
             <div>
                 <header>Normal Steak Dinner</header>
@@ -62,7 +63,7 @@
             </div>
         </div>
 
-        <div class="breakfast">
+        <div class="breakfast" name="shown">
             <img src="images/milkshake.jpg" alt="Picture of a Shake">
             <div>
                 <header>Cum Shake</header>
@@ -72,7 +73,7 @@
             </div>
         </div>
 
-        <div class="dinner">
+        <div class="dinner" name="shown">
             <img src="images/macAndCheese.jpg" alt="Picture of Mac & Cheese">
             <div>
                 <header>Mac & Cheese</header>
@@ -82,7 +83,7 @@
             </div>
         </div>
 
-        <div class="dinner">
+        <div class="dinner" name="shown">
             <img src="images/dinosaurNuggets.jpg" alt="Picture of Dinosaur Nuggets">
             <div>
                 <header>Dinosaur Nuggets</header>
@@ -110,7 +111,7 @@
         const dinners = document.getElementsByClassName("dinner")
         const dinnersArray = Array.from(dinners)
 
-        let foodArrays = [breakfastArray, lunchesArray, dinnersArray]
+        const foodArrays = [breakfastArray, lunchesArray, dinnersArray,]
 
         filtersArray.forEach(elem => {
             elem.addEventListener("click", function picked(){
@@ -123,29 +124,53 @@
             })
         });
         
-        function hideCategory(shown){
-            //shown parameter is what needs to NOT be hidden
-            foodArrays.remove(shown)
-            console.log(foodArrays)
-        }
 
         function categorize(category){ //take the class of the item
             switch(category) {
                 case "all":
                     console.log("all")
-                    hideCategory("all")
+                    foodArrays.forEach(element => {
+                        element.forEach(category => {
+                            category.removeAttribute("name")
+                            category.setAttribute("name", "shown")
+                        })
+                    });
                     break
                 case "breakfast":
                     console.log("breakfast")
-                    hideCategory(breakfastArray)
+                    foodArrays.forEach(element => {
+                        element.forEach(category => {
+                            category.setAttribute("name", "hidden")
+                        })
+                        breakfastArray.forEach(shown => {
+                            shown.removeAttribute("name")
+                            shown.setAttribute("name", "shown")
+                        });
+                    });
                     break
                 case "lunch":
                     console.log("lunch")
-                    hideCategory(lunchesArray)
+                    foodArrays.forEach(element => {
+                        element.forEach(category => {
+                            category.setAttribute("name", "hidden")
+                        })
+                        lunchesArray.forEach(shown => {
+                            shown.removeAttribute("name")
+                            shown.setAttribute("name", "shown")
+                        });
+                    });
                     break
                 case "dinner":
                     console.log("dinner")
-                    hideCategory(dinnersArray)
+                    foodArrays.forEach(element => {
+                        element.forEach(category => {
+                            category.setAttribute("name", "hidden")
+                        })
+                        dinnersArray.forEach(shown => {
+                            shown.removeAttribute("name")
+                            shown.setAttribute("name", "shown")
+                        });
+                    });
                     break
                 }
             }
