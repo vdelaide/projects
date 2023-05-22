@@ -5,7 +5,6 @@
     <title>Menu Time</title>
     <link rel="stylesheet" href="menu.css">
 </head>
-<!--Please ignore my childish naming habits-->
 <!--
     TODO FOR TMRW:
     --------------
@@ -34,7 +33,7 @@
 
     <div id="items">
 
-        <div class="breakfast" name="shown">
+        <div class="breakfast shown">
             <img src="images/ominousPancakes.jpeg" alt="Picture of Pancakes">
             <div>
                 <header>Ominous Pancakes</header>
@@ -44,7 +43,7 @@
             </div>
         </div>
 
-        <div class="lunch" name="shown">
+        <div class="lunch shown">
             <img src="images/saltySandwiches.jpg" alt="Picture of Sandwiches">
             <div>
                 <header>Salty Sandwich</header>
@@ -54,7 +53,7 @@
             </div>
         </div>
 
-        <div class="dinner" name="shown">
+        <div class="dinner shown">
             <img src="images/steakDinner.jpg" alt="Picture of a Steak Dinner">
             <div>
                 <header>Normal Steak Dinner</header>
@@ -64,7 +63,7 @@
             </div>
         </div>
 
-        <div class="breakfast" name="shown">
+        <div class="breakfast shown">
             <img src="images/milkshake.jpg" alt="Picture of a Shake">
             <div>
                 <header>Cum Shake</header>
@@ -74,7 +73,7 @@
             </div>
         </div>
 
-        <div class="dinner" name="shown">
+        <div class="dinner shown">
             <img src="images/macAndCheese.jpg" alt="Picture of Mac & Cheese">
             <div>
                 <header>Mac & Cheese</header>
@@ -84,7 +83,7 @@
             </div>
         </div>
 
-        <div class="dinner" name="shown">
+        <div class="dinner shown">
             <img src="images/dinosaurNuggets.jpg" alt="Picture of Dinosaur Nuggets">
             <div>
                 <header>Dinosaur Nuggets</header>
@@ -97,8 +96,6 @@
     </div>
 
     <script>
-        //ignore everything here pls :3
-
         const filters = document.getElementById("filters");
         const filtersArray = Array.from(filters.children);
 
@@ -125,49 +122,37 @@
             })
         });
         
+        function enact(shown){
+            foodArrays.forEach(element => {
+                        element.forEach(category => {
+                            category.classList.remove("shown")
+                            category.classList.add("hidden")
+                        })
+                        shown.forEach(item => {
+                            item.classList.remove("hidden")
+                            item.classList.add("shown")
+                        });
+                    });
+        }
 
         function categorize(category){ //take the class of the item
             switch(category) {
                 case "all":
                     foodArrays.forEach(element => {
                         element.forEach(category => {
-                            category.removeAttribute("name")
-                            category.setAttribute("name", "shown")
+                            category.classList.remove("hidden")
+                            category.classList.add("shown")
                         })
                     });
                     break
                 case "breakfast":
-                    foodArrays.forEach(element => {
-                        element.forEach(category => {
-                            category.setAttribute("name", "hidden")
-                        })
-                        breakfastArray.forEach(shown => {
-                            shown.removeAttribute("name")
-                            shown.setAttribute("name", "shown")
-                        });
-                    });
+                    enact(breakfastArray)
                     break
                 case "lunch":
-                    foodArrays.forEach(element => {
-                        element.forEach(category => {
-                            category.setAttribute("name", "hidden")
-                        })
-                        lunchesArray.forEach(shown => {
-                            shown.removeAttribute("name")
-                            shown.setAttribute("name", "shown")
-                        });
-                    });
+                    enact(lunchesArray)
                     break
                 case "dinner":
-                    foodArrays.forEach(element => {
-                        element.forEach(category => {
-                            category.setAttribute("name", "hidden")
-                        })
-                        dinnersArray.forEach(shown => {
-                            shown.removeAttribute("name")
-                            shown.setAttribute("name", "shown")
-                        });
-                    });
+                    enact(dinnersArray)
                     break
                 }
             }

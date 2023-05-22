@@ -139,9 +139,9 @@ header{
     color: rgb(250, 250, 135);
 }
 
-[name~="hidden"]{
+.hidden{
     display: none;
 }
-[name~="shown"]{
+.shown{
     display: grid;
 }
