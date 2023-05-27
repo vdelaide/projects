@@ -56,6 +56,7 @@ nav{
 .content{
   display: flex;
   flex-direction: column;
+  max-height: 0;
   margin-top: 11em;
   position: fixed;
   height: auto;
@@ -72,4 +73,10 @@ nav{
   background-color: rgb(25, 174, 25);
   border-width: 0;
   padding: 1em 1.7em;
+  transition: background-color 0.25s;
+}
+
+.content button:hover{
+  background-color: rgb(23, 156, 23);
+  cursor: pointer;
 }
