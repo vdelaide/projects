@@ -28,15 +28,15 @@
 
                     <div>
 
-                        <button>Happiness</button>
-                        <button>Apathy</button>
-                        <button>Depression</button>
+                        <button id="desc-happiness">Happiness</button>
+                        <button id="desc-apathy">Apathy</button>
+                        <button id="desc-depression" >Depression</button>
 
                     </div>
 
-                    <h2>Caption</h2>
+                    <h2>Happiness</h2>
 
-                    <p id="description">this is a description</p>
+                    <p>this is a description</p>
 
                 </div>
 
@@ -46,18 +46,49 @@
         
         <script> // INLINE JAVASCRIPT OMG OMG OMG
 
-            const descContainer = document.querySelector("#description-container")
             // let the below be an example of my mistake, i was confused that it wasn't working
             //const buttons = descContainer.getElementsByTagName("button")
             // but researching into it further i realized it was html collection not an array,
             // so i had to turn it into an array
+
+            //The variables are a LOT more cleaner than my last attempt :)
+
+            const descContainer = document.querySelector("#description-container")
             const buttons = [...descContainer.getElementsByTagName("button")]
 
-            console.log(buttons)
+            const caption = descContainer.querySelector("h2")
+            const description = descContainer.querySelector("p")
 
-            buttons.forEach(element => {
-                console.log(element)
-                //add event listener click and display dif tabs, in the morning
+            //Text for tabs
+             const textHappiness = "lorem ipsum something something happiness yes :)"
+             const textApathy = "lorem ipsum something something apathy maybe :|"
+             const textDepression = "lorem ipsum something something depression no :("
+
+            //debated whether or not it'd be better to change the text inside of the 
+            buttons.forEach(button => {
+                console.log("For each starting")
+                console.log(button)
+
+                button.addEventListener("click", function switchTab(){
+                    console.log(button.id)
+                    console.log("Running")
+
+                    switch(button.id){
+                        case "desc-happiness":
+                            caption.innerText = "Happiness"
+                            description.innerText = textHappiness
+                            break
+                        case "desc-apathy":
+                            caption.innerText = "Apathy"
+                            description.innerText = textApathy
+                            break
+                        case "desc-depression":
+                            caption.innerText = "Depression"
+                            description.innerText = textDepression
+                            break
+                    }
+
+                })
             });
 
         </script>

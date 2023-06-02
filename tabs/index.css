@@ -60,13 +60,20 @@ main{
 
 #description-container > div{
     display: flex;
+    border-radius: 2vh 0;
 }
 
 #description-container > div > button{
+    background-color: red;
     padding: 2vh 1vh 2vh 1vh;
-    height: 100%;
+    border-width: 0;
     width: 100%;
 }
+
+#description-container > div > button:hover{
+    opacity: 0.7;
+}
+
 #description-container h2, p{
     margin: 2vh 0 0 2vh;
 }
