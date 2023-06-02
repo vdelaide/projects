@@ -2,12 +2,19 @@ body{
     margin: 0;
     height: 100vh;
     width: 100vw;
+    background-color: rgb(241, 155, 155);
 }
 
 h1, h2, p{
     margin: 0;
     width: fit-content;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 main{
@@ -30,7 +37,36 @@ main{
 }
 
 #tab-container{
-    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
     height: 50vh;
-    width: 90vh;
+    width: 110vh;
+    margin-top: 5vh;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#tab-container > img{
+    height: 40vh;
+    width: 50vh;
+    border-radius: 2vh;
+}
+
+#description-container{
+    background-color: white;
+    width: 50vh;
+    border-radius: 2vh;
+}
+
+#description-container > div{
+    display: flex;
+}
+
+#description-container > div > button{
+    padding: 2vh 1vh 2vh 1vh;
+    height: 100%;
+    width: 100%;
+}
+#description-container h2, p{
+    margin: 2vh 0 0 2vh;
 }
