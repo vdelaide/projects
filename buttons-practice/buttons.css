@@ -1,3 +1,23 @@
-button{
-  background-color: blue;
+
+#popping-button{
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  border: solid 0.1rem rgb(87, 85, 85);
+  border-color: white;
+  border-radius: 0.25rem;
+  gap: .5rem;
+  transition: all 0.15s;
+}
+
+#popping-button:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+  color: black;
+  border-color: black;
+  transform: translate(-.25rem,-.25rem);
+  box-shadow: .25rem .25rem 0 rgb(0, 0, 0);
 }
