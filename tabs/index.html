@@ -36,7 +36,7 @@
 
                     <h2>Happiness</h2>
 
-                    <p>this is a description</p>
+                    <p>lorem ipsum something something happiness yes :)</p>
 
                 </div>
 
@@ -47,13 +47,16 @@
         <script> // INLINE JAVASCRIPT OMG OMG OMG
 
             // let the below be an example of my mistake, i was confused that it wasn't working
-            //const buttons = descContainer.getElementsByTagName("button")
+            //--------------const buttons = descContainer.getElementsByTagName("button")--------------//
             // but researching into it further i realized it was html collection not an array,
             // so i had to turn it into an array
 
-            //The variables are a LOT more cleaner than my last attempt :)
-
+            const tabContainer = document.getElementById("tab-container")
             const descContainer = document.querySelector("#description-container")
+
+            // below is really useful, finds the immediate child that is image :)
+            // can use querySelectorAll to find *all* the immediate children of a specific tagname
+            const image = tabContainer.querySelector("#tab-container > img")
             const buttons = [...descContainer.getElementsByTagName("button")]
 
             const caption = descContainer.querySelector("h2")
@@ -64,24 +67,28 @@
              const textApathy = "lorem ipsum something something apathy maybe :|"
              const textDepression = "lorem ipsum something something depression no :("
 
-            //debated whether or not it'd be better to change the text inside of the 
             buttons.forEach(button => {
 
                 button.addEventListener("click", function switchTab(){
 
                     switch(button.id){
+
                         case "desc-happiness":
+                            image.src = "imgs/catPuddle.jpg"
                             caption.innerText = "Happiness"
                             description.innerText = textHappiness
                             break
                         case "desc-apathy":
+                            image.src = "imgs/catRaisingHand.jpg"
                             caption.innerText = "Apathy"
                             description.innerText = textApathy
                             break
                         case "desc-depression":
+                            image.src = "imgs/ominousPancakes.jpeg"
                             caption.innerText = "Depression"
                             description.innerText = textDepression
                             break
+
                     }
 
                 })

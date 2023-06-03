@@ -1,8 +1,14 @@
+:root{
+    --background-color: #BFFFBC;
+    --text-color: #A8AEC1;
+    --accent-color: #A6FFA1;
+}
+
 body{
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(241, 155, 155);
+    background-color: var(--background-color);
 }
 
 h1, h2, p{
@@ -11,6 +17,7 @@ h1, h2, p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
+    color: var(--text-color);
 }
 
 button:hover{
