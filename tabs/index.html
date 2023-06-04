@@ -16,8 +16,6 @@
 
                 <h1>About</h1>
 
-                <p>Lorem ipsum dolor sit amet</p>
-
             </div>
 
             <div id="tab-container">
@@ -28,15 +26,15 @@
 
                     <div>
 
-                        <button id="desc-happiness">Happiness</button>
-                        <button id="desc-apathy">Apathy</button>
-                        <button id="desc-depression" >Depression</button>
+                        <button id="desc-first">Explore</button>
+                        <button id="desc-second">Listen</button>
+                        <button id="desc-third" >Learn</button>
 
                     </div>
 
-                    <h2>Happiness</h2>
+                    <h2>Explore</h2>
 
-                    <p>lorem ipsum something something happiness yes :)</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium qui veritatis accusamus molestiae, blanditiis dolorem quas at quibusdam impedit id aliquid, consequatur cupiditate laborum. Corporis libero explicabo consectetur repellat doloremque?</p>
 
                 </div>
 
@@ -63,9 +61,9 @@
             const description = descContainer.querySelector("p")
 
             //Text for tabs
-             const textHappiness = "lorem ipsum something something happiness yes :)"
-             const textApathy = "lorem ipsum something something apathy maybe :|"
-             const textDepression = "lorem ipsum something something depression no :("
+             const textFirst = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium qui veritatis accusamus molestiae, blanditiis dolorem quas at quibusdam impedit id aliquid, consequatur cupiditate laborum. Corporis libero explicabo consectetur repellat doloremque?"
+             const textSecond = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Est lorem ipsum dolor sit amet consectetur. Sed velit dignissim."
+             const textThird = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
 
             buttons.forEach(button => {
 
@@ -73,20 +71,20 @@
 
                     switch(button.id){
 
-                        case "desc-happiness":
+                        case "desc-first":
                             image.src = "imgs/catPuddle.jpg"
-                            caption.innerText = "Happiness"
-                            description.innerText = textHappiness
+                            caption.innerText = "Explore"
+                            description.innerText = textFirst
                             break
-                        case "desc-apathy":
+                        case "desc-second":
                             image.src = "imgs/catRaisingHand.jpg"
-                            caption.innerText = "Apathy"
-                            description.innerText = textApathy
+                            caption.innerText = "Listen"
+                            description.innerText = textSecond
                             break
-                        case "desc-depression":
+                        case "desc-third":
                             image.src = "imgs/ominousPancakes.jpeg"
-                            caption.innerText = "Depression"
-                            description.innerText = textDepression
+                            caption.innerText = "Learn"
+                            description.innerText = textThird
                             break
 
                     }
