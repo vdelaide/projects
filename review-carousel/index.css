@@ -1,0 +1,85 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, p{
+    font-family: Noto Sans, sans-serif;
+    margin: 0;
+}
+
+p{
+    font-size: 1rem;
+    color: grey;
+}
+
+/* Sections */
+
+#testimonies{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+    width: 100%;
+}
+
+/* Review Carousel*/
+
+#review-carousel{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4%;
+    background-color: lightgrey;
+    margin: 0 2.5vh;
+    width: 20rem; /*An abomination*/
+    height: 100%;
+}
+
+#review-carousel img{
+    height: auto;
+    width: 17vh;
+}
+
+/* Next Review & Changes*/
+
+.next-review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 10vh;
+    width: 7.5vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0.5;
+}
+
+.next-review:hover{
+    cursor: pointer;
+}
+
+.next-review p{
+    color: black;
+    opacity: 1;
+}
+
+#left{
+    left: 0;
+}
+
+#right{
+    right: 0;
+}
