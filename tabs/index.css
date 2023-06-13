@@ -1,9 +1,20 @@
+*{
+    outline: 2px solid lightgreen;
+}
 :root{
-    --background-color: rgb(189, 188, 188);
-    --background-color-2: rgb(222, 218, 218);
-    --text-color: black;
-    --accent-color: #a9a9a9;
-    --accent-color-contrast: #918181;
+    --background-color: #CDCEF5;
+    --background-color-contrast: #6467E3;
+
+    --text-color: #260316;
+
+    --primary: #8fb4ff;
+    --primary-contrast: #0040C4;
+
+    --secondary: #bdd1ff;
+    --secondary-contrast: #1F4B8F;
+
+    --accent-color: #ff8f94;
+    --accent-color-contrast: #f26f75;
 }
 
 body{
@@ -13,10 +24,10 @@ body{
     background-color: var(--background-color);
 }
 
-h1, h2, p{
+h1, h2, p, a{
     margin: 0;
     width: fit-content;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito Sans", Geneva, Tahoma, sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
     color: var(--text-color);
@@ -26,6 +37,34 @@ button:hover{
     cursor: pointer;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--background-color-contrast);
+    height: 8vh;
+    width: 100%;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 3vh;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: var(--background-color-contrast);
+    color: var(--background-color);
+}
+
+#primary-nav{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -33,15 +72,23 @@ main{
     justify-content: center;
 }
 
+#tabs{
+    background-color: white;
+    margin-top: 8vh;
+}
+
 #titles{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 5vh;
-    height: 15vh;
-    width: 70vh;
+    height: auto;
     align-content: center;
     justify-content: center;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 3.5rem;
 }
 
 #tab-container{
@@ -51,7 +98,7 @@ main{
     width: 130vh;
     margin-top: 5vh;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #tab-container > img{
@@ -61,7 +108,7 @@ main{
 }
 
 #description-container{
-    background-color: var(--background-color-2);
+    background-color: var(--primary);
     width: 50vh;
     border-radius: 2vh;
 }
