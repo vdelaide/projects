@@ -3,6 +3,12 @@
 :root{
     --quick-info: rgb(89, 89, 218);
     --quick-info-contrast: rgb(255, 255, 255);
+
+    /* Text & Button Colors */
+    --text: rgb(0, 0, 0);
+    --light-grey: rgb(169, 169, 169);
+    --grey: rgb(112, 112, 112);
+    --shiny: rgb(168, 217, 7);
 }
 
 html{
@@ -16,6 +22,12 @@ body{
     width: 100%;
 }
 
+/* General Specifications */
+
+h1, h2, h3, h4, h5, h6, p, button, li{
+    font-family: "Nunito Sans", Verdana, Tahoma, sans-serif;
+}
+
 ul{
     margin: 0;
     list-style-type: none;
@@ -26,12 +38,11 @@ ul{
 
 a{
     text-decoration: none;
+    color: var(--text);
 }
 
-/* General Specifications */
-
-h1, h2, h3, h4, h5, h6, p, button, li{
-    font-family: "Nunito Sans", Verdana, Tahoma, sans-serif;
+a, button, .golden-button :hover{
+    cursor: pointer;
 }
 
 /* Quick Info Nav */
@@ -71,21 +82,70 @@ nav{
     display: grid;
     grid-template: 1fr/1fr 1fr 1fr;
     align-items: center;
+    padding: 2vh 0;
     width: 100%;
 }
 
 nav ul{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #primary-nav li{
     margin: 0 1vh;
 }
 
+#primary-nav li a{
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: color 0.25s;
+}
+
+#primary-nav li a:hover{
+    color: var(--quick-info);
+}
+
 #logo{
-    height: 15vh;
+    height: 10vh;
     width: auto;
     object-fit: cover;
     justify-self: center; /*Doesn't justify when using nav > *{display:flex; justify-content: center;}*/
+}
+
+.golden-button{
+    display: flex;
+    border: 0.125rem solid var(--light-grey);
+    border-radius: 0.7vh;
+    color: var(--grey);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1vh 2vh;
+    margin: 0 1vh;
+    transition: border-color 0.25s,
+    color 0.25s;
+}
+
+.golden-button:hover{
+    border-color: var(--shiny);
+    color: var(--shiny);
+}
+
+#solid-nav-button{
+    display: flex;
+    justify-self: center;
+    padding: 0.75vh 2vh;
+    background-color: var(--quick-info);
+    color: var(--quick-info-contrast);
+    border: 0.25vh solid var(--quick-info);
+    border-radius: 0.15rem;
+    font-size: 0.9rem;
+    transition: background-color 0.4s,
+    color 0.4s;
+}
+
+#solid-nav-button:hover{
+    background-color: var(--quick-info-contrast);
+    color: var(--quick-info);
 }
