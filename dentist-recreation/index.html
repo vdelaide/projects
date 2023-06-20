@@ -2,6 +2,19 @@
 <html lang="en-US">
     <!--Before anything is said, I'm taking from https://happyteethbyganson.com, and making it in my own way
     Using this solely for practice, and nothing else pls don't sue i'm poor 🥺-->
+    
+    <!--
+        TODO:
+        *Add tabindex attrs to elements when finished.
+        *Change the order of the sections to be more 'logical'
+        *Finish all the sections
+        *Finish the footer
+        *Come back and do the main-hero's proportions and hierarchy and stuff
+        *Add the fixed navbar after scrolling down
+        *Try to implement more accessibility
+        *Workout the mobile layout
+    -->
+    
     <head>
 
         <!--Document Information-->
@@ -35,7 +48,7 @@
 
                     <li>
 
-                        <a href="#" aria-label="Email for Dentist"> <!--Aria label does the same as adding that span element-->
+                        <a href="#" aria-label="Email for Dentist">
                             <i class="fa fa-envelope" aria-hidden="true">
                             </i>
                         </a>
@@ -92,24 +105,21 @@
 
                 </ul>
 
-                <img id="logo" src="https://happyteethbyganson.com/wp-content/uploads/2017/07/horiz_logo.png" alt="A logo of a smiling cartoon tooth on a yellow background with the words Smiling Tooth Dentistry to its right.">
+                <img id="logo" src="https://happyteethbyganson.com/wp-content/uploads/2017/07/horiz_logo.png" alt="Happy Teeth Dentistry's Logo of a Smilling Tooth">
 
                 <ul id="secondary-nav">
 
                     <li>
-                        <a aria-label="Click to go to Patient Portal"
+                        <a
                         href="#" class="golden-button">Patient Portal</a>
                     </li>
 
                     <li>
-                        <a 
-                        aria-label="Click to Download a Referral Form" 
-                        href="#" class="golden-button">Download Referral Form</a>
+                        <a href="#" class="golden-button">Download Referral Form</a>
                     </li>
 
                     <li>
-                        <a aria-label="Click to Book an Appointment Now"
-                        href="#" id="solid-nav-button">Book Now</a>
+                        <a href="#" id="solid-nav-button">Book Now</a>
                     </li>
 
                 </ul>
@@ -121,16 +131,25 @@
         <main>
 
             <section id="main-hero" aria-label="An image of a dentist's office"> <!-- Hero Image is this -->
+                <!--Can't get the image to fit like cover would on a normal image-->
 
                 <div> <!--The proportions on this r SUPER wacky. No clear hierarchy. Will fix later,
                 not super keen on getting the fine-details right the first time-->
 
                     <h2>Professional Dentistry</h2>
                     <h4>At Happy Teeth, we love educating kids, and young adults about their dental health!</h4>
-                    <a aria-label="Click to Learn More About Our Dentistry!"
-                    href="#" id="learn-more-btn">Learn More</a>
+                    <a href="#" id="learn-more-btn">Learn More</a>
 
                 </div>
+
+            </section>
+
+            <section id="appointment-booking"> <!--Go over this section in figma-->
+
+                <h2>Book an Appointment</h2>
+                <p>Now Accepting new Patients</p>
+
+                <a href="" aria-label="Click to book an appointment">Click Here</a>
 
             </section>
 
