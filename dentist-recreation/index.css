@@ -1,8 +1,9 @@
 /* Set-up */
 
 :root{
-    --quick-info: rgb(89, 89, 218);
-    --quick-info-contrast: rgb(255, 255, 255);
+    --light-blue: rgb(89, 89, 218);
+    --dark-blue: rgb(76, 76, 184);
+    --blue-contrast: rgb(255, 255, 255);
 
     /* Text & Button Colors */
     --text: rgb(0, 0, 0);
@@ -10,6 +11,7 @@
 
     --light-grey: rgb(169, 169, 169);
     --grey: rgb(112, 112, 112);
+    --dark-grey: rgb(101, 101, 101);
     --shiny: rgb(168, 217, 7);
 }
 
@@ -51,6 +53,19 @@ a, button, .golden-button :hover{
     cursor: pointer;
 }
 
+hr{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: none;
+    margin-inline-end: none;
+    border-style: solid;
+}
+
+hr.solid-short{
+    border: 1px solid var(--light-blue);
+    width: 50vh;
+}
+
 /* Quick Info Nav */
 
 #quick-info{
@@ -59,11 +74,11 @@ a, button, .golden-button :hover{
     justify-content: center;
     height: 5vh;
     width: 100%;
-    background-color: var(--quick-info);
+    background-color: var(--light-blue);
 }
 
 #quick-info h2{
-    color: var(--quick-info-contrast);
+    color: var(--blue-contrast);
     font-size: 0.75rem;
 }
 
@@ -75,7 +90,7 @@ a, button, .golden-button :hover{
 
 #icons li ::before{
     margin: 0 1vh;
-    color: var(--quick-info-contrast);
+    color: var(--blue-contrast);
 }
 
 .fa{
@@ -109,7 +124,7 @@ nav ul{
 }
 
 #primary-nav li a:hover{
-    color: var(--quick-info);
+    color: var(--light-blue);
 }
 
 #logo{
@@ -142,9 +157,9 @@ nav ul{
     display: flex;
     justify-self: center;
     padding: 0.75vh 2vh;
-    background-color: var(--quick-info);
-    color: var(--quick-info-contrast);
-    border: 0.25vh solid var(--quick-info);
+    background-color: var(--light-blue);
+    color: var(--blue-contrast);
+    border: 0.25vh solid var(--light-blue);
     border-radius: 0.15rem;
     font-size: 0.9rem;
     transition: background-color 0.4s,
@@ -152,8 +167,8 @@ nav ul{
 }
 
 #solid-nav-button:hover{
-    background-color: var(--quick-info-contrast);
-    color: var(--quick-info);
+    background-color: var(--blue-contrast);
+    color: var(--light-blue);
 }
 
 /* Main & Its Sections */
@@ -204,18 +219,64 @@ main{
     align-items: center;
     height: 17vh;
     width: 17vh;
-    background-color: var(--quick-info);
-    color: var(--quick-info-contrast);
+    background-color: var(--light-blue);
+    color: var(--blue-contrast);
     border-radius: 0.3rem;
     font-size: 1.1rem;
     font-weight: 600;
 }
 /*Add box shadow and a bit of color change to the #learn-more-btn later*/
 
+/*Quick Appointment Booking Section*/
+
 #appointment-booking{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5vh;
+    padding: 5vh 0;
+}
+
+#appointment-booking h2{
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+#appointment-booking p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+    color: var(--dark-grey);
+}
+
+#appointment-booking a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 4vh;
+    border-radius: 0.5vh;
+    background-color: var(--dark-blue);
+    color: var(--blue-contrast);
+}
+
+/* About Us */
+
+#about-us{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+#about-us > *{
+    margin: 0 2.5vh;
+}
+
+#about-us img{
+    height: 45vh;
+    width: auto;
+    object-fit: cover;
 }
