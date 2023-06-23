@@ -265,7 +265,6 @@ main{
 
 #about-us{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-bottom: 5vh;
@@ -275,8 +274,39 @@ main{
     margin: 0 2.5vh;
 }
 
+#about-us article{
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us article > *{
+    margin: 1vh 0;
+}
+
 #about-us img{
     height: 45vh;
     width: auto;
     object-fit: cover;
+}
+
+#about-us h2{
+    color: var(--dark-blue);
+    font-size: 2.5rem;
+}
+
+#about-us p{
+    font-size: 0.9rem;
+    width: 50vh;
+}
+
+#about-us a{
+    /*Tried using padding but it wouldn't 'work'*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7.5vh;
+    width: 20vh;
+    border-radius: 0.5vh;
+    background-color: var(--dark-blue);
+    color: var(--blue-contrast);
 }
