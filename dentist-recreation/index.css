@@ -28,7 +28,7 @@ body{
 
 /* General Specifications */
 
-h1, h2, h3, h4, h5, h6, p, button, li, a{
+h1, h2, h3, h4, h5, h6, p, button, li, a, cite, span{
     font-family: "Nunito Sans", Verdana, Tahoma, sans-serif;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -316,6 +316,7 @@ main{
     border-radius: 0.5vh;
     background-color: var(--dark-blue);
     color: var(--blue-contrast);
+    margin-bottom: 5vh;
 }
 
 /* Review Carousel Section */
@@ -330,6 +331,7 @@ main{
 #review-carousel h4{
     font-size: 2.5rem;
     color: var(--dark-blue);
+    margin-bottom: 1vh;
 }
 
 #review-carousel hr{
@@ -337,8 +339,54 @@ main{
     width: 50vh;
 }
 
+.carousel-card{
+    margin-top: 4vh;
+}
+
 .carousel-card img{
-    height: 5vh;
-    width: 5vh;
+    height: 7.5vh;
+    width: 7.5vh;
     border-radius: 50%;
+    margin-bottom: 2.5vh;
+}
+
+.carousel-card p{
+    text-align: center;
+    color: var(--grey);
+    width: 50%;
+    margin-bottom: 1vh;
+}
+
+.carousel-card cite{
+    font-weight: 700;
+    margin-bottom: 2.5vh;
+}
+
+.star-rating{
+    margin-bottom: 1vh;
+}
+
+/*Counter & Controls for Testimonials*/
+
+#review-carousel > button{
+    position: absolute;
+    align-items: center;
+}
+
+#left-btn{
+    left: 0;
+    margin-left: 20%;
+}
+
+#right-btn{
+    right: 0;
+    margin-right: 20%;
+}
+
+#counter, #counter-wrap ul{
+    display: flex;
+}
+
+#counter-wrap li{
+    margin: 0 2vh;
 }
