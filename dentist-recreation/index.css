@@ -371,6 +371,7 @@ main{
 #review-carousel > button{
     position: absolute;
     align-items: center;
+    border: none;
 }
 
 #left-btn{
@@ -383,10 +384,27 @@ main{
     margin-right: 20%;
 }
 
+#counter-wrap{
+    display: flex;
+    width: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+#counter-wrap ul{
+    transform: translatex(0px)
+}
+
 #counter, #counter-wrap ul{
     display: flex;
 }
 
 #counter-wrap li{
-    margin: 0 2vh;
+    width: 20px;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
 }
+
+/**/
