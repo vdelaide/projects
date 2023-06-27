@@ -407,4 +407,36 @@ main{
     text-align: center;
 }
 
-/**/
+/*Snippets Section*/
+
+#snippets{
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0;
+    background-color: yellow;
+}
+
+#snippets h2{
+    display: flex;
+    align-self: center;
+}
+
+#snippets-grid{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#snippets-grid > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 2.5vh;
+    padding: 5vh;
+}
+
+#snippets-grid img{
+    height: auto;
+    width: 10vh;
+}
